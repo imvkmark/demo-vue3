@@ -22,7 +22,6 @@ export default defineComponent({
     },
     methods: {
         closeArrowLeft: function () {
-            console.log('sub-click-left-arrow');
             this.$emit('clickCloseIcon', false);
         }
     }

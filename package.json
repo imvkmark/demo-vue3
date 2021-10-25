@@ -1,5 +1,5 @@
 {
-    "name": "demo-vue3",
+    "name": "vant-demo",
     "version": "0.0.1",
     "private": false,
     "description": "A Vite2.x + Vue3 + TypeScript template starter",
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com:imvkmark/demo-vue3.git"
+        "url": "git+ssh://git@github.com:imvkmark/vant-demo.git"
     },
     "keywords": [
         "Vite",
@@ -26,7 +26,7 @@
     ],
     "author": "XPoet",
     "license": "MIT",
-    "homepage": "https://github.com/imvkmark/demo-vue3",
+    "homepage": "https://github.com/imvkmark/vant-demo",
     "lint-staged": {
         "*.{vue,js,ts}": "eslint --fix"
     },
