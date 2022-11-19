@@ -6,18 +6,12 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 import { Toast } from 'vant';
 
-export default defineComponent({
-    name: 'Element',
-    methods: {
-        showToast: function () {
-            Toast('Show Toast At Element')
-        }
-    }
-})
+const showToast = function () {
+    Toast('Show Toast At Element')
+}
 </script>
 
 <style scoped lang="less">

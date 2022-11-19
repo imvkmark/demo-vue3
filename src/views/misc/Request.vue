@@ -16,36 +16,26 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, Ref } from 'vue'
+<script lang="ts" setup>
+import { ref, Ref } from 'vue'
 import { apiUserProfileInfo } from '@/services/user/profile';
 
-export default defineComponent({
-    name: 'Request',
-    setup() {
-        const userInfo: Ref = ref(null)
-        const loading = ref(false)
+const userInfo: Ref = ref(null)
+const loading = ref(false)
 
-        const getUserInfo = () => {
-            loading.value = true
-            apiUserProfileInfo()
-                .then((response) => {
-                    console.log('response: ', response)
-                    userInfo.value = response.data
-                    loading.value = false
-                })
-                .catch((error) => {
-                    loading.value = false
-                    console.error(error)
-                })
-        }
-        return {
-            userInfo,
-            loading,
-            getUserInfo
-        }
-    }
-})
+const getUserInfo = () => {
+    loading.value = true
+    apiUserProfileInfo()
+        .then((response) => {
+            console.log('response: ', response)
+            userInfo.value = response.data
+            loading.value = false
+        })
+        .catch((error) => {
+            loading.value = false
+            console.error(error)
+        })
+}
 </script>
 
 <style scoped>

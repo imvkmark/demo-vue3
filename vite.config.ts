@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import styleImport from 'vite-plugin-style-import'
-// 如果编辑器提示 path 模块找不到，则可以安装一下 @types/node -> yarn add @types/node -D
 import { resolve } from 'path'
-
+import Components from 'unplugin-vue-components/vite'
+import { VantResolver, } from 'unplugin-vue-components/resolvers'
 // 获取 package 的版本号
 import pkgJson from './package.json';
 
@@ -13,16 +12,12 @@ export default defineConfig(({ mode }) => {
         envDir: './config/',
         plugins: [
             vue(),
-            // 按需载入 Vant
-            styleImport({
-                libs: [
-                    {
-                        libraryName: 'vant',
-                        esModule: true,
-                        resolveStyle: (name) => `vant/es/${name}/style`
-                    }
+            Components({
+                dts: true,
+                resolvers:[
+                    VantResolver()
                 ]
-            })
+            }),
         ],
         resolve: {
             alias: {

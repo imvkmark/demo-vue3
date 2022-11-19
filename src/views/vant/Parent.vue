@@ -11,31 +11,20 @@
     <children :show="visibleTrade" @clickCloseIcon="toggleTrade"/>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 import Children from '@/views/vant/Children.vue';
+import { Toast } from "vant";
 
-export default defineComponent({
-    name: 'Parent',
-    components: {
-        Children
-    },
-    data: function () {
-        return {
-            visibleTrade: false
-        }
-    },
-    methods: {
-        onClickLeft: function () {
-            this.$toast('点击了返回')
-        },
-        toggleTrade: function () {
-            console.log('parent-toggle');
-            this.visibleTrade = !this.visibleTrade;
-            console.log(this.visibleTrade);
-        }
-    }
-})
+const visibleTrade = ref(false)
+
+const onClickLeft = function () {
+    Toast('点击了返回')
+}
+const toggleTrade = function () {
+    visibleTrade.value = !visibleTrade.value
+}
+
 </script>
 <style lang="less" scoped>
 p {

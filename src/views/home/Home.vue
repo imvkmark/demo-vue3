@@ -4,7 +4,7 @@
             <img class="logo" alt="Vue logo" src="@/assets/logo.png"/>
         </p>
         <p>
-            Vite2.x + Vue3.x + TypeScript + Vant3
+            Vite3.x + Vue3.x + TypeScript + Vant3
         </p>
         <p>
             IconFont
@@ -19,21 +19,10 @@
     </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import IconFont from '@/components/core/IconFont';
-
-export default defineComponent({
-    name: 'Readme',
-    components: {
-        IconFont
-    }
-})
-</script>
+<script lang="ts" setup>
+import IconFont from '@/components/core/IconFont';</script>
 
 <style scoped lang="less">
-@import '../../assets/less/vars.less';
-
 .home-container {
     text-align: center;
     padding-top: 20px;

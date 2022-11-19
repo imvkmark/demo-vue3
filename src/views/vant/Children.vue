@@ -1,6 +1,6 @@
 <template>
     <van-popup
-        v-model:show="show"
+        :show="props.show"
         @close="closeArrowLeft"
         round closeable
         position="bottom"
@@ -9,23 +9,21 @@
     </van-popup>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
 
-export default defineComponent({
-    name: 'Children',
-    props: {
-        show: {
-            type: Boolean,
-            required: true
-        }
-    },
-    methods: {
-        closeArrowLeft: function () {
-            this.$emit('clickCloseIcon', false);
-        }
+const props = defineProps({
+    show: {
+        type: Boolean,
+        required: true
     }
 })
+const emits = defineEmits([
+    'clickCloseIcon'
+])
+
+const closeArrowLeft = function () {
+    emits('clickCloseIcon', false);
+}
 </script>
 <style scoped>
 h3 {

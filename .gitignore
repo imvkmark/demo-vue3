@@ -12,6 +12,8 @@
 *.local
 yarn.lock
 package-lock.json
+pnpm-lock.yaml
+components.d.ts
 
 # IDEs and editors
 /.idea
