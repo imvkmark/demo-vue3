@@ -11,8 +11,6 @@
             <icon-font type="icon-measure"/>
             Antdv
         </p>
-    </div>
-    <div class="x--list">
         <p>
             本项目基于 Vite / Vue3 / TypeScript / Vant3 的可以用于正式开发用的一个骨架
         </p>
@@ -20,7 +18,8 @@
 </template>
 
 <script lang="ts" setup>
-import IconFont from '@/components/core/IconFont';</script>
+import IconFont from '@/components/core/IconFont';
+</script>
 
 <style scoped lang="less">
 .home-container {

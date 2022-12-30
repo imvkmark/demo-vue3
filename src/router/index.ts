@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, Router, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, Router, RouteRecordRaw } from 'vue-router'
 import Vant from '@/layouts/Vant.vue';
 import Plain from '@/layouts/Plain.vue';
 
@@ -26,16 +26,14 @@ const routes: Array<RouteRecordRaw> = [
         path: '/misc',
         component: Plain,
         children: [
-
-            { path: 'request', component: () => import('@/views/misc/Request.vue'), name: 'misc.request' }
+            { path: 'request', component: () => import('@/views/misc/Request.vue'), name: 'misc.request' },
+            { path: 'height', component: () => import('@/views/misc/Height.vue'), name: 'misc.height' }
         ]
     },
     {
         path: '/vant',
         component: Plain,
         children: [
-            // 懒加载
-
             { path: 'element', component: () => import('@/views/vant/Element.vue'), name: 'vant.element' },
             { path: 'children', component: () => import('@/views/vant/Children.vue'), name: 'vant.children' },
             { path: 'parent', component: () => import('@/views/vant/Parent.vue'), name: 'vant.parent' }
@@ -44,7 +42,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router: Router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory('/vant-demo'),
     routes
 })
 

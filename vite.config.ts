@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import Components from 'unplugin-vue-components/vite'
-import { VantResolver, } from 'unplugin-vue-components/resolvers'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
 // 获取 package 的版本号
 import pkgJson from './package.json';
 
@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
             vue(),
             Components({
                 dts: true,
-                resolvers:[
+                resolvers: [
                     VantResolver()
                 ]
             }),
@@ -26,15 +26,15 @@ export default defineConfig(({ mode }) => {
         },
         build: {
             // outDir: `./build/${mode}`
-            outDir: `./build/vue3`
+            outDir: `./build/vant-demo`
         },
-        base: '/vue3/',
+        base: '/vant-demo/',
         define: {
             'import.meta.env.DEF_APP_VERSION': JSON.stringify(pkgJson.version)
         },
         server: {
             port: 9241,
-            open: true,
+            host: true,
             cors: true
         }
     }
