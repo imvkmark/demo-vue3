@@ -26,9 +26,9 @@ export default defineConfig(({ mode }) => {
         },
         build: {
             // outDir: `./build/${mode}`
-            outDir: `./build/vant-demo`
+            outDir: `./build`
         },
-        base: '/vant-demo/',
+        base: '/',
         define: {
             'import.meta.env.DEF_APP_VERSION': JSON.stringify(pkgJson.version)
         },
