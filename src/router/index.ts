@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory, Router, RouteRecordRaw} from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory, Router, RouteRecordRaw } from 'vue-router'
 import Vant from '@/layouts/Vant.vue';
 import Plain from '@/layouts/Plain.vue';
 
@@ -43,7 +43,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router: Router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes
 })
 
