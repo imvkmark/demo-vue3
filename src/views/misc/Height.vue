@@ -32,16 +32,11 @@ import UAParser from "ua-parser-js";
 let ua = new UAParser(navigator.userAgent)
 
 const dpr = window.devicePixelRatio;
-let height = '100%';
-if (ua.getOS().name === 'iOS' && ua.getOS().version === '15.0') {
-    height = '100vh'
-}
 </script>
 
 <style lang="less">
 #app {
     border: 4px solid var(--wr-border-color);
-    color: v-bind(height);
 }
 </style>
 <style lang="less" scoped>

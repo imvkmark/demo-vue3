@@ -3,14 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import UAParser from "ua-parser-js";
 
-let ua = new UAParser(navigator.userAgent)
-
-let height = '100%';
-if (ua.getOS().name === 'iOS' && ua.getOS().version === '15.0') {
-    height = '100vh'
-}
 </script>
 
 <style lang="less">
@@ -24,6 +17,6 @@ if (ua.getOS().name === 'iOS' && ua.getOS().version === '15.0') {
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: v-bind(height);
+    height: 100%;
 }
 </style>
