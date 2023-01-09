@@ -10,6 +10,9 @@
         <p>
             <router-link :to="{ name: 'misc.geo'}">Geo(获取地理位置)</router-link>
         </p>
+        <p>
+            <router-link :to="{ name: 'misc.ua'}">Ua(用户 Header)</router-link>
+        </p>
     </div>
 </template>
 

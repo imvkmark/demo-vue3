@@ -13,7 +13,7 @@ export default defineConfig(({mode}) => {
         envDir: './config/',
         plugins: [
             vue(),
-            mkcert(),
+            // mkcert(),
             Components({
                 dts: true,
                 resolvers: [

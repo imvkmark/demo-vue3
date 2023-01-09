@@ -2,12 +2,15 @@
     <router-view/>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script lang="ts" setup>
+import UAParser from "ua-parser-js";
 
-export default defineComponent({
-    name: 'App'
-})
+let ua = new UAParser(navigator.userAgent)
+
+let height = '100%';
+if (ua.getOS().name === 'iOS' && ua.getOS().version === '15.0') {
+    height = '100vh'
+}
 </script>
 
 <style lang="less">
@@ -21,6 +24,6 @@ export default defineComponent({
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: v-bind(height);
 }
 </style>
