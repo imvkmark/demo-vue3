@@ -17,6 +17,6 @@
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: var(--wr-app-height);
 }
 </style>

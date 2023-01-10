@@ -28,15 +28,25 @@
 
 <script lang="ts" setup>
 import UAParser from "ua-parser-js";
+import { onMounted } from "vue";
 
 let ua = new UAParser(navigator.userAgent)
 
 const dpr = window.devicePixelRatio;
+
+onMounted(() => {
+    if (ua.getOS().name === 'iOS' && ua.getOS().version === '15.0') {
+        if (document.documentElement.hasAttribute('fix-height')) {
+            document.documentElement.removeAttribute('fix-height');
+        }
+        document.documentElement.setAttribute('fix-height', 'vh');
+    }
+})
 </script>
 
 <style lang="less">
 #app {
-    border: 4px solid var(--wr-border-color);
+    border: 8px solid var(--wr-border-color);
 }
 </style>
 <style lang="less" scoped>
