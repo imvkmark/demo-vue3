@@ -3,23 +3,27 @@
         这里限定的图片宽度是 300
         <p>加载 300 宽度</p>
         <img :src="imageFix(myUrl, 300)" width="300" alt="300"/>
+        <p>加载 600 宽度</p>
+        <img :src="imageFix(myUrl, 600)" width="300" alt="600"/>
         <p>自动根据 DPR 加载, DPR {{ dpr }}</p>
-        <img :src="image(myUrl, 300)" width="300" alt="300"/>
+        <img :src="image(myUrl, 300)" width="300" alt="DPR"/>
         <p>加载 1080 宽度</p>
-        <img :src="imageFix(myUrl, 1080)" width="300" alt="300"/>
+        <img :src="imageFix(myUrl, 1080)" width="300" alt="1080"/>
         <p>加载原图</p>
-        <img :src="imageFix(myUrl)" width="300" alt="300"/>
+        <img :src="imageFix(myUrl)" width="300" alt="origin"/>
 
         <hr>
         这里限定的图片宽度是 300
         <p>加载 300 宽度</p>
         <img :src="imageFix(thirdUrl, 300)" width="300" alt="300"/>
+        <p>加载 600 宽度</p>
+        <img :src="imageFix(thirdUrl, 600)" width="300" alt="600"/>
         <p>自动根据 DPR 加载, DPR {{ dpr }}</p>
-        <img :src="image(thirdUrl, 300)" width="300" alt="300"/>
+        <img :src="image(thirdUrl, 300)" width="300" alt="DPR"/>
         <p>加载 1080 宽度</p>
-        <img :src="imageFix(thirdUrl, 1080)" width="300" alt="300"/>
+        <img :src="imageFix(thirdUrl, 1080)" width="300" alt="1080"/>
         <p>加载原图</p>
-        <img :src="imageFix(thirdUrl)" width="300" alt="300"/>
+        <img :src="imageFix(thirdUrl)" width="300" alt="origin"/>
     </div>
 </template>
 
