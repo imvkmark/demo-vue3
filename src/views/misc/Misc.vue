@@ -13,6 +13,9 @@
         <p>
             <router-link :to="{ name: 'misc.ua'}">Ua(用户 Header)</router-link>
         </p>
+        <p>
+            <router-link :to="{ name: 'misc.dpr'}">Dpr(像素分辨比例)</router-link>
+        </p>
     </div>
 </template>
 
