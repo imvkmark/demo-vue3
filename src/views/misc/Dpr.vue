@@ -35,10 +35,10 @@ const myUrl = 'https://test-oss.iliexiang.com/_res/images/02.jpg';
 const thirdUrl = 'https://mofangyo.oss-cn-hangzhou.aliyuncs.com/ccimgs/18b38fb34b1f4601ad5cc52e85a71e85.jpg';
 
 const image = (url: string, width: number = 0) => {
-    const w = Number(width * window.devicePixelRatio).toFixed(0);
     if (!width) {
         return url;
     }
+    const w = Number(width * window.devicePixelRatio).toFixed(0);
     return url + '?x-oss-process=image/resize,l_' + w;
 }
 const imageFix = (url: string, width: number = 0) => {
