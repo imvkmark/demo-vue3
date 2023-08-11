@@ -3,7 +3,7 @@
         <h3>基于 Vue 的代码示例</h3>
         <p>
             <router-link :to="{ name: 'vue.simple'}">页面内的函数处理</router-link>
-            <router-link :to="{ name: 'vue.vuex'}">Vuex</router-link>
+            <router-link :to="{ name: 'vue.pinia'}">Pinia</router-link>
         </p>
     </div>
 </template>

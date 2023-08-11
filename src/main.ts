@@ -2,11 +2,16 @@ import { createApp } from 'vue'
 // route
 import router from '@/router/index'
 import 'vant/es/toast/style';
-import { key, store } from '@/store'
 import App from './App.vue'
+import useDirective from "@/utils/use-directive";
+import { createPinia } from "pinia";
 
+const pinia = createPinia();
 
 const app = createApp(App)
-app
+
+
+useDirective(app)
     .use(router)
-    .use(store, key).mount('#app')
+    .use(pinia)
+    .mount('#app')

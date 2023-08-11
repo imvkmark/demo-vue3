@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, createWebHistory, Router, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router'
 import Vant from '@/layouts/Vant.vue';
 import Plain from '@/layouts/Plain.vue';
 
@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
         component: Plain,
         children: [
             { path: 'simple', component: () => import('@/views/vue/Simple.vue'), name: 'vue.simple' },
-            { path: 'vuex', component: () => import('@/views/vue/Vuex.vue'), name: 'vue.vuex' }
+            { path: 'pinia', component: () => import('@/views/vue/Pinia.vue'), name: 'vue.pinia' }
         ]
     },
     {

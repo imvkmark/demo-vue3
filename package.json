@@ -39,11 +39,11 @@
         "crypto-js": "^4.0.0",
         "easytimer.js": "^4.5.4",
         "lodash-es": "^4.17.21",
+        "pinia": "^2.1.6",
         "ua-parser-js": "^1.0.35",
         "vant": "^4.6.4",
         "vue": "^3.3.4",
-        "vue-router": "^4.2.4",
-        "vuex": "^4.0.0"
+        "vue-router": "^4.2.4"
     },
     "devDependencies": {
         "@types/crypto-js": "^4.0.2",

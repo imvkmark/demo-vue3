@@ -1,6 +1,6 @@
 <template>
     <div class="vant--vuex">
-        <div class="page-title">Vuex Test Page</div>
+        <div class="page-title">Pinia Test Page</div>
         <p>store Root is: {{ reactiveData.text }}</p>
         <p>store doubleCount is: {{ reactiveData.count }}</p>
         <van-button type="primary" @click="double">double</van-button>
@@ -9,17 +9,16 @@
 
 <script lang="ts" setup>
 import { computed, reactive } from 'vue'
-import { useStore } from '@/store'
+import { useStorePoppy } from "@/store/poppy";
 
-
-const store = useStore()
+const storePoppy = useStorePoppy();
 const reactiveData = reactive({
-    text: computed(() => store.state.text),
-    count: computed(() => store.state.vant.count)
+    text: computed(() => storePoppy.text),
+    count: computed(() => storePoppy.count)
 })
 
 const double = () => {
-    store.commit('vant/DOUBLE_COUNT')
+    storePoppy.DoubleCount()
 }
 </script>
 

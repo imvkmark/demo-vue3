@@ -61,6 +61,9 @@ export const sessionStore = (key: any, val: any) => {
     }
 };
 
+export const canDoNext = (ele: HTMLElement | undefined) => {
+    return ele && !ele.dataset.disabled;
+}
 
 /**
  * 通过域名 + 版本号摒弃缓存
