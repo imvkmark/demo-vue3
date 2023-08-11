@@ -24,6 +24,8 @@
         <img :src="imageFix(thirdUrl, 1080)" width="300" alt="1080"/>
         <p>加载原图</p>
         <img :src="imageFix(thirdUrl)" width="300" alt="origin"/>
+        <p>加载原图</p>
+        <img src="https://test-oss.iliexiang.com/_res/images/01-big.png?x-oss-process=image/resize,l_200" @error="onImageLoadError" width="300" alt="origin"/>
     </div>
 </template>
 
@@ -31,8 +33,13 @@
 
 const dpr = window.devicePixelRatio;
 
-const myUrl = 'https://test-oss.iliexiang.com/_res/images/02.jpg';
+const myUrl = 'https://test-oss.iliexiang.com/_res/images/01.jpg';
 const thirdUrl = 'https://mofangyo.oss-cn-hangzhou.aliyuncs.com/ccimgs/18b38fb34b1f4601ad5cc52e85a71e85.jpg';
+
+const onImageLoadError = (e) => {
+    console.log(e.target.src)
+    e.target.src = 'https://test-oss.iliexiang.com/_res/images/01.jpg';
+}
 
 const image = (url: string, width: number = 0) => {
     if (!width) {

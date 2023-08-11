@@ -31,6 +31,7 @@ const routes: Array<RouteRecordRaw> = [
             { path: 'geo', component: () => import('@/views/misc/Geo.vue'), name: 'misc.geo' },
             { path: 'ua', component: () => import('@/views/misc/Ua.vue'), name: 'misc.ua' },
             { path: 'dpr', component: () => import('@/views/misc/Dpr.vue'), name: 'misc.dpr' },
+            { path: 'click', component: () => import('@/views/misc/Click.vue'), name: 'misc.click' },
         ]
     },
     {
